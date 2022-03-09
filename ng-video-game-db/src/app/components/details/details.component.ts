@@ -11,10 +11,10 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class DetailsComponent implements OnInit, OnDestroy {
   gameRating = 0;
-  gameId: string;
-  game: Game;
-  routeSub: Subscription;
-  gameSub: Subscription;
+  gameId!: string;
+  game!: Game;
+  routeSub!: Subscription;
+  gameSub!: Subscription;
 
   constructor(
     private activatedRoute: ActivatedRoute,

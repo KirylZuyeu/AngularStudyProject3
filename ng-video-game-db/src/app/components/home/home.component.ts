@@ -10,10 +10,10 @@ import { HttpService } from 'src/app/services/http.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  public sort: string;
-  public games: Array<Game>;
-  private routeSub: Subscription;
-  private gameSub: Subscription;
+  public sort!: string;
+  public games!: Array<Game>;
+  private routeSub!: Subscription;
+  private gameSub!: Subscription;
 
   constructor(    
     private httpService: HttpService,
@@ -39,8 +39,12 @@ export class HomeComponent implements OnInit, OnDestroy {
       });
   }
 
-  openGameDetails(id: string): void {
-    this.router.navigate(['details', id]);
+  // openGameDetails(id: string): void {
+  //   this.router.navigate(['details', id]);
+  // }
+
+  openGameDetails(): void {
+    console.log('Hello world');
   }
 
   ngOnDestroy(): void {
